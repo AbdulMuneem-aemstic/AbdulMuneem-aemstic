@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style type="text/css">
+	:root{
+
+
+--lg-lightcolor:linear-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159, 172, 230,0));
+--lg-color: linear-gradient(to left, #74edb5, #9face6);
+}
+
+body{
+	/*background: red;*/
+	background-image: var(--lg-lightcolor), url('');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100vw;
+}
+.bb{
+	background: var(--lg-color);
+}
+</style>
+
+</head>
+<body>
+
+	<div class="container"><br>
+		<h1 class="text-center text-success">Complete Form Validation In JavaScript</h1> <br>
+		<div class="col-lg-8 m-auto d-block">
+			
+		<form action="" onsubmit="return validation()" class="bg-light">
+
+		<div class="form-group" >
+		<label> Username:</label>		
+		<input type="text" name="user" class="form-control" id="user" autocomplete="off">
+		<span id="username" class="text-danger font-weight-bold" ></span>
+		</div>
+
+		<div class="form-group" >
+		<label> Password:</label>		
+		<input type="text" name="pass" class="form-control" id="pass" autocomplete="off">
+		<span id="pswd" class="text-danger font-weight-bold" ></span>
+		</div>
+
+		<div class="form-group" >
+		<label> Confirm Password:</label>		
+		<input type="text" name="conpass" class="form-control" id="conpass" autocomplete="off">
+		<span id="conpswd" class="text-danger font-weight-bold" ></span>
+		</div>
+
+		<div class="form-group" >
+		<label> Mobile Number:</label>		
+		<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
+		<span id="mblnum" class="text-danger font-weight-bold" ></span>
+		</div>
+
+		<div class="form-group" >
+		<label> Email:</label>		
+		<input type="text" name="email" class="form-control" id="emails" autocomplete="off">
+		<span id="eml" class="text-danger font-weight-bold" ></span>
+		</div>
+
+		<div class="form-group" >
+		<label> radio:</label>		
+		<input type="radio" name="same" class=" m-3" id="radio1" autocomplete="off"> LIKE </input>
+		<input type="radio" name="same" class=" m-3" id="radio2" autocomplete="off"> SHARE </input>
+		<input type="radio" name="same" class=" m-3" id="radio3" autocomplete="off"> SUBSCRIBE </input>
+		<span id="radError" class="text-danger font-weight-bold" ></span>
+		</div>
+
+		<div class=" form-group  " >
+		<label> CheckBox Button:</label>		
+		<input type="checkbox" name="gender" class=" m-2" value="Like"   id="checkbox1" autocomplete="off"> LIKE </input>
+		<input type="checkbox" name="gender" class=" m-2" value="SHARE" id="checkbox2" autocomplete="off">SHARE </input>
+		<input type="checkbox" name="gender" class=" m-2" value="SUBSCRIBE" id="checkbox3" autocomplete="off">SUBSCRIBE </input>
+		<span id="checkError" class="text-danger font-weight-bold" ></span>
+		</div>
+		
+		<input type="submit" name="submit" value="submit" class="btn  btn-success bb" >
+
+		</form>
+
+
+		</div>
+	</div>
+	<script type="text/javascript">	
+
+	function validation(){
+
+	var user = document.getElementById('user').value;
+	var pass = document.getElementById('pass').value;
+	var conpass = document.getElementById('conpass').value;
+	var mobileNumber = document.getElementById('mobileNumber').value;
+	var emails = document.getElementById('emails').value;
+
+
+			
+			
+			
+
+			// event.preventDefault();
+			
+			
+			
+		
+
+
+	if (user == "") {
+	document.getElementById('username').innerHTML = "Please Fill the username field";
+	return false;
+	
+	}else{
+		document.getElementById('username').style.display = "none";
+
+	}
+
+	if ((user.length <=2) || (user.length >= 20)) {
+		document.getElementById('username').innerHTML = "User length must be between 2 and 20";
+		document.getElementById('username').style.display = "block";
+	return false;
+
+	}
+	if (!isNaN(user)) {
+		document.getElementById('username').innerHTML = "Only characters are allowd";
+		document.getElementById('username').style.display = "block";
+	return false;
+
+	}
+
+
+
+	if (pass == "") {
+	document.getElementById('pswd').innerHTML = "Please Fill the Password field";
+	return false;
+	}else{
+		document.getElementById('pswd').style.display = "none";
+
+	}
+	if ((pass.length <=2) || (pass.length >= 20)) {
+		document.getElementById('pswd').innerHTML = "User length must be between 2 and 20";
+		document.getElementById('pswd').style.display = "block";
+		return false; }
+
+
+
+		if (conpass == "") {
+	document.getElementById('conpswd').innerHTML = "Please Fill the Confirm Password field";
+	return false;
+	}
+
+	if (conpass !=  pass) {
+		document.getElementById('conpswd').innerHTML = "Password is not matching";
+	return false; 
+
+	}
+	
+
+	// if (conpass ==  pass) {
+	// 	document.getElementById('conpswd').innerHTML = "Confirm Password";
+	// return false; 
+
+	// } else{
+	// 	document.getElementById('conpswd').innerHTML = "Password is not matching";
+	// return false;
+
+	// }
+
+	if (mobileNumber == "") {
+	document.getElementById('mblnum').innerHTML = "Please Fill the username field";
+	// document.getElementById('mblnum').style.display = "block";
+	return false;
+	
+	}
+
+	// if (mobileNumber == "") {
+	// document.getElementById('mblnum').innerHTML = "Please Fill the Mobile Number field";
+	// return false;
+	// }
+
+	if (isNaN(mobileNumber)) {
+	document.getElementById('mblnum').innerHTML = "user must write digits only, not characters";
+	return false;	
+	}
+
+	if (mobileNumber.length <= 4) {
+	document.getElementById('mblnum').innerHTML = "user must write minimum 6 digits";
+	return false;	
+	}
+
+
+	if (emails  == "") {
+	document.getElementById('eml').innerHTML = "Please Fill the email field";
+	return false;
+	}
+
+	if (emails.indexOf('@')  <= 0) {
+	document.getElementById('eml').innerHTML = "@ Invalid Position";
+	return false;
+	}
+
+	if ((emails.charAt(emails.length-4) !='.') && (emails.charAt(emails.length-3) !='.')){
+	document.getElementById('eml').innerHTML = ". Invalid Position";
+	return false;
+	}
+
+
+	var radio1 = document.getElementById('radio1').checked;
+	var radio2 = document.getElementById('radio2').checked;
+	var radio3 = document.getElementById('radio3').checked;
+
+	if ((radio1 == '') && (radio2 == '') && (radio3 == '')) {
+		document.getElementById('radError').innerHTML = "Please Select Anyone";
+		return false;
+
+	} else { 
+		}
+
+
+		var checkbox1 = document.getElementById('checkbox1').checked;
+			var checkbox2 = document.getElementById('checkbox2').checked;
+			var checkbox3 = document.getElementById('checkbox3').checked;
+				
+				if ((checkbox1 == '') && (checkbox2 == '') && (checkbox3 == '')) 
+					{
+						document.getElementById('checkError').innerHTML ="Please Select anyone";
+						return false;
+					} else { 
+						return true;
+					}
+
+
+
+	// 	var checkbox1 = document.getElementById('checkbox1').checked;
+	// var checkbox2 = document.getElementById('checkbox2').checked;
+	// var checkbox3 = document.getElementById('checkbox3').checked;
+
+	// if ((checkbox1 == '') && (checkbox2 == '') && (checkbox3 == '')) {
+	// 	document.getElementById('checkError').innerHTML = "Please Select Anyone";
+	// 	return false;
+
+	// } else { 
+	// 	return true;}
+
+}
+</script>
+
+
+
+
+</body>
+</html>
