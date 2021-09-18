@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+
+
+	 <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+	<style >
+    *{ margin: 0px; padding: 0px; box-sizing: border-box; }
+
+    .slideshow{
+      width: 80%;
+      height: 700px;
+      margin: auto;
+    }
+    #slideimage{
+      width: 100%;
+      height: 550px;
+    }
+		</style>
+	
+
+
+</head>
+<body>
+
+<div class="slidshow">
+<h1>Image Slide show using html and JavaScript</h1>
+<hr>
+<img src="inc/img/fantasy-2049567_1280.jpg" id="slideimage">
+
+</div>
+
+
+<script type="text/javascript">
+  
+  var images = [
+                'inc/img/flower-3175428_1280.jpg',
+                'inc/img/fantasy-2049567_1280.jpg',
+                'inc/img/heart-1192662_1280.jpg',
+                'inc/img/hills-2836301_1280.jpg',
+                'inc/img/leaf-1001679_1280.jpg'
+
+                ];
+
+    var i= 0;
+
+    function slides() {
+      document.getElementById('slideimage').src = images[i];
+      if (i<(images.length-1))
+       {
+      i++  
+    } else  {
+     i = 0;
+    }
+    }
+
+    setInterval(slides, 2000);
+</script>
+
+
+</body>
+</html>
