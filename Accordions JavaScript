@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+
+
+	 <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Abdul Muneem | Aemstic -->
+  
+  
+	<style >
+		
+	
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+<style type="text/css">
+*{
+  margin: 0px; padding: 0px; box-sizing: border-box;
+}
+
+
+  :root{
+
+
+--lg-lightcolor:linear-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159, 172, 230,0));
+--lg-color: linear-gradient(to left, #74edb5, #9face6);
+}
+
+body{
+  /*background: red;*/
+  background-image: var(--lg-lightcolor), url('');
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  /*min-height: 100vh;
+  width: 100vw;*/
+}
+
+
+.container{
+  width: 40%;
+  max-height: : 40%;
+  /*background: lightgray;*/
+  margin: 0px auto;
+  /*height: 540px;*/
+  background: rgb(194,29,148);
+background: linear-gradient(90deg, rgba(194,29,148,1) 0%, rgba(118,190,192,1) 100%, rgba(0,212,255,1) 100%, rgba(14,57,124,1) 100%);
+  cursor: pointer;
+  border-radius: 10px;
+  padding-top: 3px;
+  /*position: relative;*/
+
+  
+}
+.title{
+  /*position: absolute;*/
+  top: 0;
+  left: 20px;
+  padding: 0px 0px 22px 176px;
+  color: #7efff5;
+  
+}
+
+.sec1, .content{
+  width: 300px;
+  
+  padding:5px;
+  margin: 10px auto;
+  
+
+
+}
+.sec1{
+  /*background: #ecf0f1;*/
+ background: rgb(25,210,170);
+background: linear-gradient(90deg, rgba(25,210,170,1) 0%, rgba(118,147,192,1) 100%, rgba(0,212,255,1) 100%, rgba(14,57,124,1) 100%);
+margin-top: -29px;
+color: #dff9fb;
+
+
+}
+.sec1:hover{
+  color: #dd00ff;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.content{
+ /*background: white;*/
+  color:white; 
+
+}
+
+	</style>
+
+</head>
+<body> 
+  <div>
+    <h3>Hello</h3>
+    <p>"The pain itself is a lot of pain, it's enhanced. To soothe the troubles, let him seek those whom they encounter! What services drive back all pain, nothing by what means, by reason of greed! But, be soothed, accepted! Our mind, the wise man!"</p>
+  </div>
+  <div class="container">
+    <h1 class="title">Accordoins</h1>
+  <h2 id="sec1" class="sec1" onclick="accordion1()">+ Section 1</h2>
+  <p id="content1" class="content"> </p>
+
+   <h2 id="sec2" class="sec1" onclick="accordion2()">+ Section 2</h2>
+  <p id="content2" class="content"></p>
+  
+   <h2 id="sec3" class="sec1" onclick="accordion3()">+ Section 3</h2>
+  <p id="content3" class="content"></p>
+</div>
+
+  <script type="text/javascript">
+    function accordion1() {
+    if (document.getElementById('content1').innerHTML =="") {
+    document.getElementById('content1').innerHTML = "The pain itself is a lot of pain, it's enhanced. To soothe the troubles, let him seek those whom they encounter! What services drive back all pain, nothing by what means, by reason of greed! But, be soothed, accepted! Our mind, the wise man!";
+    document.getElementById('sec1').innerHTML = "- Section 1";
+    document.getElementById('content1').style.marginBottom = '38px';
+    
+    } else {
+      document.getElementById('content1').innerHTML = "";
+      document.getElementById('sec1').innerHTML = "+ Section 1";
+      document.getElementById('content1').style.marginBottom = '';
+    }
+
+
+ }
+  function accordion2() {
+    if (document.getElementById('content2').innerHTML =="") {
+    document.getElementById('content2').innerHTML = "The pain itself is a lot of pain, it's enhanced. To soothe the troubles, let him seek those whom they encounter! What services drive back all pain, nothing by what means, by reason of greed! But, be soothed, accepted! Our mind, the wise man!";
+    document.getElementById('sec2').innerHTML = "- Section 2";
+    document.getElementById('content2').style.marginBottom = '38px';
+    } else {
+      document.getElementById('content2').innerHTML = "";
+      document.getElementById('sec2').innerHTML = "+ Section 2";
+      document.getElementById('content2').style.marginBottom = '';
+    }
+    
+
+
+ }
+
+ function accordion3() {
+    if (document.getElementById('content3').innerHTML =="") {
+    document.getElementById('content3').innerHTML = "The pain itself is a lot of pain, it's enhanced. To soothe the troubles, let him seek those whom they encounter! What services drive back all pain, nothing by what means, by reason of greed! But, be soothed, accepted! Our mind, the wise man!";
+    document.getElementById('sec3').innerHTML = "- Section 3";
+    document.getElementById('content3').style.marginBottom = '38px';
+    } else {
+      document.getElementById('content3').innerHTML = "";
+      document.getElementById('sec3').innerHTML = "+ Section 3";
+      document.getElementById('content3').style.marginBottom = '';
+    }
+    
+
+
+ }
+
+
+
+</script>
+</body>
+</html>
