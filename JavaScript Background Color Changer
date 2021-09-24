@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+	*{
+		padding: 0px; margin: 0px; box-sizing: border-box;
+	}
+
+
+
+	:root{
+
+
+--lg-lightcolor:linear-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159, 172, 230,0));
+
+--lg-color: linear-gradient(to left, #74edb5, #9face6);
+}
+
+body{
+	/*background: red;*/
+	background-image: var(--lg-lightcolor), url('');
+	/*display: flex;
+	justify-content: center;
+	align-items: center;
+	*/min-height: 100vh;
+	width: 100vw;
+	padding: 50px 100px;
+}
+.container{
+/*	background-image: var(--lg-lightcolor), url('');
+	background: background-image: var(--lg-lightcolor), url('');
+*/	background: #C09ABA;
+	width: 50%;
+	height: 40px;
+	/*padding: 10px;*/
+	/*margin: 10px;*/
+	/*width: 300px;*/
+	text-align: center;
+
+}
+
+
+h1{
+	text-align: center;
+	background: var(--lg-color);
+	color: purple;
+	padding: 10px;
+	margin: 0px;
+	margin-top: 5px;
+}
+
+
+p{
+	text-align: center;
+	/*background: var(--lg-color);*/
+	font-size: 25px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 0px; 
+	/*color: purple;*/
+}
+.btn{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: red;
+	/*text-align: right;*/
+	margin: 10px;
+	border-radius: 50%;
+
+}
+#red{
+	background: red;
+}
+#green{
+	background: green;
+}
+#blue{
+	background: blue;
+}
+#black{
+	background: black;
+}
+#default{
+	background: #F12656;
+/*/	background-image: var(--lg-lightcolor), url('');*/
+}
+.text{
+	text-align: right;
+	/*font-size: 30px;*/
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+	<span class="btn" id="red" onclick="red()" ></span>
+	<span class="btn" id="green" onclick="green()"></span>
+	<span class="btn" id="blue" onclick="blue()"></span>
+	<span class="btn" id="black" onclick="black()"></span>
+	<span class="btn" id="default" onclick="dfl()"></span>
+	<span class="text">Select Color</span>
+</div>
+
+		<h1>Background Color and Text Color Changer</h1>
+
+	<p id="para">
+		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+	</p>
+
+
+
+		<script type="text/javascript">
+				function red() {
+
+  document.body.style.backgroundColor = "red";
+  document.getElementById("para").style.color = "yellow";
+}
+
+function green() {
+  document.body.style.backgroundColor = "green";
+  document.getElementById("para").style.color = "pink";
+}
+
+function blue() {
+  document.body.style.backgroundColor = "blue";
+  document.getElementById("para").style.color = "white";
+}
+
+function black() {
+  document.body.style.backgroundColor = "black";
+  document.getElementById("para").style.color = "#0AD0F5";
+}
+
+function dfl() {
+  document.body.style.backgroundColor = "#F12656";
+  document.getElementById("para").style.color = "#414141";
+}
+
+
+		</script>
+
+</body>
+</html>
