@@ -1,0 +1,50 @@
+const tempLoad = () => {
+	
+	var nums = 1;
+	var num2 = 2;
+	var num3 = 3;
+	var num4 = 4;
+	var num5 = 5;
+	var num6 = 6;
+
+	
+	let counter = document.getElementById('counter');
+
+	counter.innerHTML = nums;
+	counter.style.color = 'tan';
+	
+	setTimeout(conn,1000);
+	
+	 function conn(){
+		counter.innerHTML= num2 ;
+		counter.style.color = 'red';
+	}
+
+	setTimeout( function() {
+		counter.innerHTML= num3 ;
+		counter.style.color = 'pink'; 
+	},2000);
+	setTimeout( function() {
+		counter.innerHTML= num4 ;
+		counter.style.color = 'orange';
+	},3000);
+	setTimeout( function() {
+		counter.innerHTML= num5 ;
+		counter.style.color = 'yellow';
+	},4000);
+	setTimeout( function() {
+		counter.innerHTML= num6 ;
+		counter.style.color = 'red';
+	},5000);
+
+	}
+	setInterval(tempLoad, 6000);
+// 
+
+ tempLoad();
+
+ <div class="countera">
+	<h1>
+		I am Counter <span id="counter" class="fa"></span>
+	</h1>
+</div>
